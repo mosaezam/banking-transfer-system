@@ -4,7 +4,7 @@ function validateTransferAmount(amount) {
     }
 }
 
-function calculateTransferFee(amount, destinationCountry) {
+function calculateFTTFee(amount, destinationCountry) {
     if (destinationCountry === "SG") {
         return amount * 0.02;
     }
@@ -13,6 +13,6 @@ function calculateTransferFee(amount, destinationCountry) {
 
 function checkTransactionLimit(amount) {
     if (amount > 50000) {
-        throw new Error("Transaction limit exceeded");
+        throw new Error("FTT transaction limit exceeded");
     }
 }
